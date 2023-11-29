@@ -10,12 +10,15 @@ interface Post {
   body: string;
 }
 
+interface UserWithPosts extends User {
+  posts: Array<Post>;
+}
+
 /**
  * How do we type this return statement so it's both
  * User AND { posts: Post[] }
  */
-export const getDefaultUserAndPosts = (): User &
-  Record<"posts", Array<Post>> => {
+export const getDefaultUserAndPosts = (): UserWithPosts => {
   return {
     id: "1",
     firstName: "Matt",
