@@ -1,4 +1,4 @@
-import { Equal, Expect } from "./helpers/type-utils";
+import { Equal, Expect } from "@total-typescript/helpers";
 
 /**
  * Here, the id property is shared between all three
